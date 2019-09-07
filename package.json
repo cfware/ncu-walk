@@ -1,5 +1,5 @@
 {
-	"name": "@cfware/ncu-walk",
+	"name": "ncu-walk",
 	"version": "0.1.0",
 	"description": "Generate a fake package.json with dependencies for all packages in node_modules",
 	"bin": {
