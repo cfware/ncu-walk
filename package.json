@@ -1,0 +1,36 @@
+{
+	"name": "@cfware/ncu-walk",
+	"version": "0.1.0",
+	"description": "Generate a fake package.json with dependencies for all packages in node_modules",
+	"bin": {
+		"ncu-walk": "ncu-walk.js"
+	},
+	"scripts": {
+		"release": "standard-version --sign",
+		"test": "xo"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"author": "Corey Farrell",
+	"license": "MIT",
+	"keywords": [],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cfware/ncu-walk.git"
+	},
+	"bugs": {
+		"url": "https://github.com/cfware/ncu-walk/issues"
+	},
+	"homepage": "https://github.com/cfware/ncu-walk#readme",
+	"dependencies": {
+		"fast-glob": "^3.0.4",
+		"p-map": "^3.0.0",
+		"semver": "^6.3.0",
+		"yargs": "^14.1.0"
+	},
+	"devDependencies": {
+		"standard-version": "^7.0.0",
+		"xo": "^0.24.0"
+	}
+}
