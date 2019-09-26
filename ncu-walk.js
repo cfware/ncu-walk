@@ -21,7 +21,7 @@ async function main(oldest, concurrency) {
 			}
 
 			dependencies[data.name] = data.version;
-		} catch (error) {
+		} catch (_) {
 			throw new Error(`Error processing ${pkg}`);
 		}
 	};
