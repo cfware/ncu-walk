@@ -1,6 +1,6 @@
 {
 	"name": "ncu-walk",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Generate a fake package.json with dependencies for all packages in node_modules",
 	"bin": {
 		"ncu-walk": "ncu-walk.js"
