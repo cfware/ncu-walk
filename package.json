@@ -25,7 +25,7 @@
 	"homepage": "https://github.com/cfware/ncu-walk#readme",
 	"dependencies": {
 		"fast-glob": "^3.0.4",
-		"p-map": "^3.0.0",
+		"p-map": "^4.0.0",
 		"semver": "^7.0.0",
 		"yargs": "^15.0.1"
 	},
