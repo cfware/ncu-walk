@@ -2,8 +2,7 @@
 'use strict';
 
 const os = require('os');
-const {promisify} = require('util');
-const readFile = promisify(require('fs').readFile);
+const fs = require('fs').promises;
 const glob = require('fast-glob');
 const pMap = require('p-map');
 const semver = require('semver');
@@ -13,16 +12,16 @@ async function main(oldest, concurrency) {
 	const compare = oldest ? 'gt' : 'lt';
 	const packages = await glob('**/node_modules/{*,@*/*}/package.json');
 	const dependencies = {};
-	const mapper = async pkg => {
+	const mapper = async packageFile => {
 		try {
-			const data = JSON.parse(await readFile(pkg, 'utf-8'));
+			const data = JSON.parse(await fs.readFile(packageFile, 'utf-8'));
 			if (data.name in dependencies && !semver[compare](dependencies[data.name], data.version)) {
 				return;
 			}
 
 			dependencies[data.name] = data.version;
 		} catch (_) {
-			throw new Error(`Error processing ${pkg}`);
+			throw new Error(`Error processing ${packageFile}`);
 		}
 	};
 

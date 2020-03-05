@@ -3,14 +3,14 @@
 	"version": "0.1.1",
 	"description": "Generate a fake package.json with dependencies for all packages in node_modules",
 	"bin": {
-		"ncu-walk": "ncu-walk.js"
+		"ncu-walk": "ncu-walk.cjs"
 	},
 	"scripts": {
 		"release": "standard-version --sign",
-		"test": "xo"
+		"test": "cfware-lint ."
 	},
 	"engines": {
-		"node": ">=8"
+		"node": ">=12"
 	},
 	"author": "Corey Farrell",
 	"license": "MIT",
@@ -30,7 +30,7 @@
 		"yargs": "^15.0.1"
 	},
 	"devDependencies": {
-		"standard-version": "^7.0.0",
-		"xo": "^0.25.3"
+		"@cfware/lint": "^1.2.0",
+		"standard-version": "^7.0.0"
 	}
 }
