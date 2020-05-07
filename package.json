@@ -31,6 +31,6 @@
 	},
 	"devDependencies": {
 		"@cfware/lint": "^1.2.0",
-		"standard-version": "^7.0.0"
+		"standard-version": "^8.0.0"
 	}
 }
